@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>More info</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="userslist"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="character">
+    <ion-card>
+      <ion-card-content class="ion-text-center">
+        <img src="{{character.image}}" alt="Loading">
+        <ion-card-title>{{character.name}}</ion-card-title>
+
+        <br>
+        <div class="blockInfo">
+          <h2 class="status">Does the character live?:</h2>
+          <strong>{{character.status}}</strong>
+        </div>
+
+        <br>
+        <div class="blockInfo">
+          <h2 class="gender">Gender:</h2>
+          <strong>{{character.gender}}</strong>
+        </div>
+
+        <br>
+        <div class="blockInfo">
+          <h2 class="species">Species:</h2>
+          <strong>{{character.species}}</strong>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

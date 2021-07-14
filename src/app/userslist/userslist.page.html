@@ -1,0 +1,36 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="body">
+
+<div class="headerApp">
+  <img src="../../assets/img/RickandMorty_logo.png" alt="Rick and Morty">
+
+  <ion-searchbar showCancelButton="never" autocomplete="on" placeholder="Search Character" animated
+  (ionChange)="buscar($event)" ></ion-searchbar>
+
+</div>
+
+  <ion-list>
+    <ion-item *ngFor="let character of characters" [routerLink]="['/info-users/' + character.id]" >
+      <ion-avatar slot="start">
+       <img src="{{character.image}}">
+      </ion-avatar>
+      <ion-label>
+        {{character.name}}
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+
+ <!--
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  -->
+
+</ion-content>
